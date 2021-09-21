@@ -17,13 +17,10 @@ UnitE は、ファッションを楽しみたい方のコーディネート参�
 
 ## 就職Termの技術
 - devise
-- 
+- お気に入り機能
 
 ## カリキュラム外の技術
 - ransack
-- 
-
-## カリキュラムの技術
 - rails_admin
 - kaminari
 - cancancan
