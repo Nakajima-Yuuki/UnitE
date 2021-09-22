@@ -2,13 +2,13 @@
 
 ## 「UnitE」概要
 
-**大切な人への日常共有アプリケーション**
+**コーディネートに悩む方達のファッション参考サイト**
 
 UnitE は、ファッションを楽しみたい方のコーディネート参考サイト。<br>
 お洒落はしたいけど上手くコーディネートが出来ない<br>
 自分にはファッションセンスがなく、毎日着る服に悩む事が多い<br>
 ファッション雑誌を買うほど、服には興味がないし、ネットで参考になるサイトはないか...、<br>
-そんな悩みを抱えてる方々に毎日のコーディネートのヒントとなるように
+そんな悩みを抱えてる方々に毎日のコーディネートのヒントとなるように<br>
 スタイリストやショップ店員が皆さんのお手本となるファッションを見つける事が出来るアプリです。
 
 ## 開発言語
@@ -22,7 +22,6 @@ UnitE は、ファッションを楽しみたい方のコーディネート参�
 ## カリキュラム外の技術
 - ransack
 - rails_admin
-- kaminari
 - cancancan
 
 ## 実行手順
@@ -44,7 +43,7 @@ https://docs.google.com/spreadsheets/d/1GGoerUN93dBiL2jFIBhhqVc13BB4XjfVYSdN1UBF
 https://cacoo.com/diagrams/phS3RYTTh4sINLt7/44B59
 
 ## ER図
-![ER1](https://user-images.githubusercontent.com/85724781/134134391-248d33c2-ed32-4585-963a-e77764aeec74.png)
+![ER1 (1)](https://user-images.githubusercontent.com/85724781/134326777-e095ef91-b097-4c20-aa37-91476e83a00c.png)
 
 
 ## 画面遷移図
