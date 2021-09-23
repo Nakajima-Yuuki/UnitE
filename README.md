@@ -43,8 +43,7 @@ https://docs.google.com/spreadsheets/d/1GGoerUN93dBiL2jFIBhhqVc13BB4XjfVYSdN1UBF
 https://cacoo.com/diagrams/phS3RYTTh4sINLt7/44B59
 
 ## ER図
-![ER1 (1)](https://user-images.githubusercontent.com/85724781/134326777-e095ef91-b097-4c20-aa37-91476e83a00c.png)
-
+![ER1 (1)](https://user-images.githubusercontent.com/85724781/134458918-ae34ef9e-535c-4842-8e92-f4992401bd93.png)
 
 ## 画面遷移図
 ![画面遷移図](https://user-images.githubusercontent.com/85724781/134347967-afe473fc-0c4b-4b56-b176-7c2a03c395ec.png)
