@@ -23,6 +23,7 @@ UnitE は、ファッションを楽しみたい方のコーディネート参�
 - ransack
 - rails_admin
 - cancancan
+- Active Storage
 
 ## 実行手順
 ```
@@ -43,7 +44,7 @@ https://docs.google.com/spreadsheets/d/1GGoerUN93dBiL2jFIBhhqVc13BB4XjfVYSdN1UBF
 https://cacoo.com/diagrams/phS3RYTTh4sINLt7/44B59
 
 ## ER図
-![ER1 (1)](https://user-images.githubusercontent.com/85724781/134458918-ae34ef9e-535c-4842-8e92-f4992401bd93.png)
+![ER1 (1)](https://user-images.githubusercontent.com/85724781/134633702-b7a87952-c7a5-4021-a281-50bcc8ed1609.png)
 
 ## 画面遷移図
 ![画面遷移図](https://user-images.githubusercontent.com/85724781/134347967-afe473fc-0c4b-4b56-b176-7c2a03c395ec.png)
