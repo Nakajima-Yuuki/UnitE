@@ -44,7 +44,7 @@ https://docs.google.com/spreadsheets/d/1GGoerUN93dBiL2jFIBhhqVc13BB4XjfVYSdN1UBF
 https://cacoo.com/diagrams/phS3RYTTh4sINLt7/44B59
 
 ## ER図
-![ER1 (1)](https://user-images.githubusercontent.com/85724781/134633702-b7a87952-c7a5-4021-a281-50bcc8ed1609.png)
+![ER1](https://user-images.githubusercontent.com/85724781/134764709-4acc81f7-9ac4-46a5-bccf-eb5b67255aaf.png)
 
 ## 画面遷移図
-![画面遷移図](https://user-images.githubusercontent.com/85724781/134347967-afe473fc-0c4b-4b56-b176-7c2a03c395ec.png)
+![画面遷移図 drawio](https://user-images.githubusercontent.com/85724781/134764850-c8b0d1c7-7578-4011-9241-7aa5e432442f.png)
