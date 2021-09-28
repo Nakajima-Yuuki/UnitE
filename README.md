@@ -44,7 +44,7 @@ https://docs.google.com/spreadsheets/d/1GGoerUN93dBiL2jFIBhhqVc13BB4XjfVYSdN1UBF
 https://cacoo.com/diagrams/phS3RYTTh4sINLt7/44B59
 
 ## ER図
-![ER1 (1)](https://user-images.githubusercontent.com/85724781/135033251-0a48a12d-0016-4a0f-98a0-ae7c1708ca9b.png)
+![ER1](https://user-images.githubusercontent.com/85724781/135054185-5bbd31c5-9120-4c83-a2d9-4eced6bdcb7f.png)
 
 ## 画面遷移図
 https://drive.google.com/file/d/1a2_U5aDpvxY-XZbWEyZRyS-_7tzj4rPx/view?usp=sharing
