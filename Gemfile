@@ -17,6 +17,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 # ログイン機能
 gem 'devise'
+gem 'devise-i18n'
+gem 'devise-i18n-views'
 
 
 group :development, :test do
