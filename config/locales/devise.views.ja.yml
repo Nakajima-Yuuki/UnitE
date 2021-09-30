@@ -51,6 +51,7 @@ ja:
         updated_at: 更新日
     models:
       user: ユーザー
+      proposer: ファッショニスタ
   devise:
     confirmations:
       confirmed: メールアドレスが確認できました。
