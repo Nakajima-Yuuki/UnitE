@@ -2,6 +2,7 @@ ja:
   activerecord:
     attributes:
       user:
+        username: 名前
         confirmation_sent_at: パスワード確認送信時刻
         confirmation_token: パスワード確認用トークン
         confirmed_at: パスワード確認時刻
@@ -26,6 +27,7 @@ ja:
         unlock_token: ロック解除用トークン
         updated_at: 更新日
       proposer:
+        username: 名前
         confirmation_sent_at: パスワード確認送信時刻
         confirmation_token: パスワード確認用トークン
         confirmed_at: パスワード確認時刻
@@ -51,7 +53,6 @@ ja:
         updated_at: 更新日
     models:
       user: ユーザー
-      proposer: ファッショニスタ
   devise:
     confirmations:
       confirmed: メールアドレスが確認できました。
