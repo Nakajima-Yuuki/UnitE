@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'proposers/show'
+  get 'users/show'
   root "top#index"
   devise_for :proposers, controllers:{
     sessions: 'proposers/sessions',
