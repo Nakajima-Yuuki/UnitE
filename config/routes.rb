@@ -1,3 +1,18 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  
+  root "top#index"
+
+  devise_for :proposers, controllers:{
+    sessions: 'proposers/sessions',
+    passwords: 'proposers/passwords',
+    registrations: 'proposers/registrations'
+  }
+  resources :proposers, only: [:show]
+
+  devise_for :users, controllers:{
+    sessions: 'users/sessions',
+    passwords: 'users/passwords',
+    registrations: 'users/registrations'
+  }
+  resources :users, only: [:show]
 end
