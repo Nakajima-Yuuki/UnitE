@@ -4,6 +4,12 @@
   <%= render "proposers/shared/error_messages", resource: resource %>
 
   <div class="field">
+          <!--サインアップ時に名前を入力できるようにフォームを追加-->
+  <div class="field">
+    <%= f.label :Username %><br />
+    <%= f.text_field :name, autofocus: true %>
+  </div>
+
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
