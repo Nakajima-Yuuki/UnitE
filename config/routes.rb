@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
-  devise_for :proposers
-  devise_for :users
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  devise_for :proposers, controllers:{
+    sessions: 'proposers/sessions',
+    passwords: 'proposers/passwords',
+    registrations: 'proposers/registrations'
+  }
+  devise_for :users, controllers:{
+    sessions: 'users/sessions',
+    passwords: 'users/passwords',
+    registrations: 'users/registrations'
+  }
 end
