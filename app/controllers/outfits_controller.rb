@@ -1,4 +1,5 @@
 class OutfitsController < ApplicationController
+  before_action :authenticate_proposer!, only: %i[new create edit update destroy]
   before_action :set_outfit, only: [:show, :edit, :update, :destroy]
 
   # GET /outfits
@@ -21,7 +22,7 @@ class OutfitsController < ApplicationController
 
   # POST /outfits
   def create
-    @outfit = Outfit.new(outfit_params)
+    @outfit = current_proposer.outfits.build(outfit_params)
 
     if @outfit.save
       redirect_to @outfit, notice: 'Outfit was successfully created.'
@@ -53,6 +54,6 @@ class OutfitsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def outfit_params
-      params.require(:outfit).permit(:title, :content)
+      params.require(:outfit).permit(:title, :content, :image)
     end
 end

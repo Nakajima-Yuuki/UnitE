@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+
 
 <h1>Outfits</h1>
 
@@ -17,9 +17,12 @@
       <tr>
         <td><%= outfit.title %></td>
         <td><%= outfit.content %></td>
+        <td><%= image_tag outfit.image.first.variant(resize: '200x200') %></td>
+        <% if current_proposer == outfit.proposer %>
         <td><%= link_to 'Show', outfit %></td>
         <td><%= link_to 'Edit', edit_outfit_path(outfit) %></td>
         <td><%= link_to 'Destroy', outfit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
