@@ -2,3 +2,8 @@
 <p>名前 : <%= @proposer.name %></p>
 <p>メールアドレス : <%= @proposer.email %></p>
 <p>プロフィール : <%= @proposer.profile %></p>
+<% if @proposer.avatar.attached? %>
+   <p><%= image_tag @proposer.avatar, class: "round-img" %></p>
+<% end %>
+
+<%= link_to 'プロフィール変更', edit_proposer_registration_path %>
