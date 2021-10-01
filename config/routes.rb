@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :outfits
   root "top#index"
 
   devise_for :proposers, controllers:{
