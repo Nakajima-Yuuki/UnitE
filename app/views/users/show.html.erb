@@ -5,3 +5,5 @@
 <% if @user.avatar.attached? %>
 <p><%= image_tag @user.avatar, class: "round-img" %></p>
 <% end %>
+
+<%= link_to 'プロフィール変更', edit_user_registration_path %>

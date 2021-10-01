@@ -5,3 +5,5 @@
 <% if @proposer.avatar.attached? %>
    <p><%= image_tag @proposer.avatar, class: "round-img" %></p>
 <% end %>
+
+<%= link_to 'プロフィール変更', edit_proposer_registration_path %>
