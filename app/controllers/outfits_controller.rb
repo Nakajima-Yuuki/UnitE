@@ -9,6 +9,8 @@ class OutfitsController < ApplicationController
 
   # GET /outfits/1
   def show
+    @stock = current_user.stocks.find_by(outfit_id: @outfit.id)
+    @stocks = @outfit.stocks_users
   end
 
   # GET /outfits/new

@@ -5,6 +5,27 @@
 <% if @user.avatar.attached? %>
 <p><%= image_tag @user.avatar.variant(resize: '200x200')%></p>
 <% end %>
+<h4>お気に入りした写真一覧</h4>
+<table border="5">
+  <thead>
+  <tr>
+    <th>投稿者</th>
+    <th>画像</th>
+    <th>タイトル</th>
+    <th>内容</th>
+  </tr>
+  </thead>
+  <tbody>
+<% @stocks.each do |stock| %>
+      <tr>
+        <td><%= stock.outfit.proposer.name %></td>
+        <td><%= image_tag (stock.outfit.image.first.variant(resize: '200x200')) %></td>
+        <td><%= stock.outfit.title %></td>
+        <td><%= stock.outfit.content %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
 
 <%= link_to 'プロフィール変更', edit_user_registration_path %>
 <td><%= link_to '投稿一覧', outfits_path %></td>

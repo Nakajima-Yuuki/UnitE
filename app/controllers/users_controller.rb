@@ -5,7 +5,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id]) #追記
+    @user = User.find(params[:id])
+    @stocks = Stock.all
   end
 
 end
