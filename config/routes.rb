@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
   resources :outfits
+  resources :stocks, only: [:create, :destroy]
   root "top#index"
 
   devise_for :proposers, controllers:{
