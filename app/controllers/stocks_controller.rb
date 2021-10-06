@@ -1,4 +1,6 @@
 class StocksController < ApplicationController
+  before_action :authenticate_user!
+  
   def create
     stock = current_user.stocks.create(outfit_id: params[:outfit_id])
     redirect_to outfit_path(params[:outfit_id]), notice: "#{stock.outfit.proposer.name}さんのブログをお気に入り登録しました"
