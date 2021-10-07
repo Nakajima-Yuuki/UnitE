@@ -26,6 +26,8 @@ gem 'image_processing', '~> 1.2'
 gem 'kaminari'
 # Webをリッチにする為のgem
 gem 'font-awesome-sass'
+#検索機能
+gem 'ransack'
 
 
 group :development, :test do
