@@ -6,6 +6,8 @@ class OutfitsController < ApplicationController
   # GET /outfits
   def index
     @outfits = Outfit.all
+    @q = Outfit.ransack(params[:q])
+    @outfits = @q.result.includes(:proposer).page(params[:page]).order("created_at desc")
   end
 
   # GET /outfits/1
