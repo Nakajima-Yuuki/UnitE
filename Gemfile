@@ -22,6 +22,10 @@ gem 'devise-i18n-views'
 # 写真機能
 gem 'mini_magick'  
 gem 'image_processing', '~> 1.2'
+# ページネーション
+gem 'kaminari'
+# Webをリッチにする為のgem
+gem 'font-awesome-sass'
 
 
 group :development, :test do
