@@ -8,4 +8,9 @@ class User < ApplicationRecord
   validates :profile, length: { maximum: 200 } #追記
   has_one_attached :avatar
   has_many :stocks, dependent: :destroy
+  has_many :likes, dependent: :destroy
+  
+  def liked_by?(outfit_id)
+    likes.where(outfit_id: outfit_id).exists?
+  end
 end
