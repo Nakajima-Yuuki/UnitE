@@ -15,10 +15,11 @@ gem 'turbolinks', '~> 5'
 #gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 
-# ログイン機能
+# ログイン機能&日本語化
 gem 'devise'
 gem 'devise-i18n'
 gem 'devise-i18n-views'
+gem 'rails-i18n'
 # 写真機能
 gem 'mini_magick'  
 gem 'image_processing', '~> 1.2'
