@@ -5,6 +5,11 @@
 <% if @user.avatar.attached? %>
 <p><%= image_tag @user.avatar.variant(resize: '200x200')%></p>
 <% end %>
+<%= link_to 'プロフィール変更', edit_user_registration_path %>
+<td><%= link_to '投稿一覧', outfits_path %></td>
+  <% if current_user.try(:admin?) %>
+    <%= link_to '管理者ログイン', rails_admin_path %>
+  <% end %>
 <h4>お気に入りした写真一覧</h4>
 <table border="5">
   <thead>
@@ -26,6 +31,3 @@
   <% end %>
   </tbody>
 </table>
-
-<%= link_to 'プロフィール変更', edit_user_registration_path %>
-<td><%= link_to '投稿一覧', outfits_path %></td>
