@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :outfits
   resources :stocks, only: [:create, :destroy]
   post 'like/:id' => 'likes#create', as: 'create_like'
