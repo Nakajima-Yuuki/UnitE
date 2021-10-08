@@ -28,6 +28,9 @@ gem 'kaminari'
 gem 'font-awesome-sass'
 #検索機能
 gem 'ransack'
+#管理者権限
+gem 'cancancan'
+gem 'rails_admin'
 
 
 group :development, :test do
