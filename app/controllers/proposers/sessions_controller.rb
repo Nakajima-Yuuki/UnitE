@@ -1,27 +1,38 @@
 # frozen_string_literal: true
-
-class Proposers::SessionsController < Devise::SessionsController
+#module Proposers
+  class Proposers::SessionsController < Devise::SessionsController
   # before_action :configure_sign_in_params, only: [:create]
+    before_action :ensure_not_user
 
-  # GET /resource/sign_in
-  # def new
-  #   super
-  # end
+    def guest_sign_in
+      proposer = Proposer.guest
+      sign_in proposer
+      redirect_to outfits_path, notice: 'ゲストファッショニスタとしてログインしました。'
+    end
 
-  # POST /resource/sign_in
-  # def create
-  #   super
-  # end
+    def ensure_not_user
+      redirect_to outfits_path, notice: 'アクセス権限がありません' if current_user.present?
+    end
+    # GET /resource/sign_in
+    # def new
+    #   super
+    # end
 
-  # DELETE /resource/sign_out
-  # def destroy
-  #   super
-  # end
+    # POST /resource/sign_in
+    # def create
+    #   super
+    # end
 
-  # protected
+    # DELETE /resource/sign_out
+    # def destroy
+    #   super
+    # end
 
-  # If you have extra params to permit, append them to the sanitizer.
-  # def configure_sign_in_params
-  #   devise_parameter_sanitizer.permit(:sign_in, keys: [:attribute])
-  # end
-end
+    # protected
+
+    # If you have extra params to permit, append them to the sanitizer.
+    #  def configure_sign_in_params
+    #   devise_parameter_sanitizer.permit(:sign_in, keys: [:attribute])
+    # end
+  end
+#end
