@@ -24,7 +24,7 @@
                 <%= link_to 'プロポーサーログイン', new_proposer_session_path %> -->
                 <%= link_to "マイページ", proposer_path(current_proposer.id) %>
                 <!-- <%= link_to 'プロフィール変更', edit_proposer_registration_path %> -->
-                <%= link_to 'プロポーサーログアウト', destroy_proposer_session_path, method: :delete %>
+                <%= link_to 'ログアウト', destroy_proposer_session_path, method: :delete %>
             <% else %>
                 <!--<%= link_to 'サインアップ', new_user_registration_path %>-->
                 <%= link_to 'Userログイン', new_user_session_path %>
