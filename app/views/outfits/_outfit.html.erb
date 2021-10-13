@@ -1,9 +1,7 @@
 <div class="card-deck">
   <div class="card mb-4">
-    <%= link_to outfit_path(outfit) do %><%= image_tag outfit.image.variant(resize: "200x200"), class: "bd-placeholder-img card-img-top", style: "width=25%, height=200, focusable=false" %><% end %>
+    <%= link_to outfit_path(outfit) do %><%= image_tag outfit.image.variant(resize: "150x200"), class: "bd-placeholder-img card-img-top", style: "width=25%, height=200, focusable=false" %><% end %>
     <div class="card-body">
-      <h5 class="card-title"><%= outfit.title %></h5>
-      <p class="card-text"><%= outfit.content %></p>
       <p class="card-text">
         <small class="text-muted">
           <% if current_proposer.nil? && current_user.liked_by?(outfit.id) %>
