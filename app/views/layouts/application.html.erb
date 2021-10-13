@@ -12,29 +12,25 @@
   <body>
         <header>
         <div class="container-fluid">
-          <nav class="navbar sticky-top navbar-light bg-dark p-3 mt-3">
-            <a class="navbar-brand" href="#">UnitE</a>
+          <nav class="navbar sticky-top  p-3 mt-3">
             <% if user_signed_in? %>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="list-unstyled">
                 <!--<%= link_to 'サインアップ', new_user_registration_path %>
                 <%= link_to 'ログイン', new_user_session_path %> -->
-                <li><%= link_to "マイページ", user_path(current_user.id) %></li>
+                <%= link_to "マイページ", user_path(current_user.id) , class: "btn btn-outline-secondary"%>
                 <!--<%= link_to 'プロフィール変更', edit_user_registration_path %> -->
-                <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
-                <% elsif proposer_signed_in? %>
+                <%= link_to 'ログアウト', destroy_user_session_path, method: :delete , class: "btn btn-outline-secondary"%>
+            <% elsif proposer_signed_in? %>
                 <!--<%= link_to 'プロポーサーサインアップ', new_proposer_registration_path %>
                 <%= link_to 'プロポーサーログイン', new_proposer_session_path %> -->
-                <%= link_to "マイページ", proposer_path(current_proposer.id) %>
+                <%= link_to "マイページ", proposer_path(current_proposer.id) , class: "btn btn-outline-secondary"%>
                 <!-- <%= link_to 'プロフィール変更', edit_proposer_registration_path %> -->
-                <%= link_to 'ログアウト', destroy_proposer_session_path, method: :delete %>
-               <% else %>
+                <%= link_to 'プロポーサーログアウト', destroy_proposer_session_path, method: :delete , class: "btn btn-outline-secondary"%>
+            <% else %>
                 <!--<%= link_to 'サインアップ', new_user_registration_path %>-->
-                <li><%= link_to 'Userログイン', new_user_session_path , class: "btn btn-outline-secondary"%></li>
+                <%= link_to 'Userログイン', new_user_session_path , class: "btn btn-outline-secondary"%>
                 <!--<%= link_to 'プロポーサーサインアップ', new_proposer_registration_path %>-->
-                <li><%= link_to 'Fashionistaログイン', new_proposer_session_path , class: "btn btn-outline-secondary"%></li>
+                <%= link_to 'Fashionistaログイン', new_proposer_session_path , class: "btn btn-outline-secondary"%>
                 <% end %>
-             </ul>
           </nav>
         </header>
     </div>
@@ -42,7 +38,7 @@
     <p class="alert"><%= alert %></p>
     <%= yield %>
         <br><br><br>
-    <footer class="text-center">
+    <footer class="fixed text-center text-dark bg-light p-3 mt-3">
     ©️2021 UnitE All Rights Reserved.
     </footer>
   </body>
