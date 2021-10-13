@@ -12,7 +12,8 @@
   <body>
         <header>
         <div class="container-fluid">
-          <nav class="navbar sticky-top  p-3 mt-3">
+          <nav class="navbar fixed-top pt-1 pb-3 mt-3">
+            <a class="navbar-brand bg-light d-block mx-auto" href="#"><%= image_tag "logo1.png", width: 100; %></a>
             <% if user_signed_in? %>
                 <!--<%= link_to 'サインアップ', new_user_registration_path %>
                 <%= link_to 'ログイン', new_user_session_path %> -->

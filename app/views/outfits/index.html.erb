@@ -1,27 +1,14 @@
 
-<%= render 'search', q: @q, url: outfits_path %><br>
-<hr>
+<%= render 'search', q: @q, url: outfits_path %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Content</th>
-      <th>image</th>
-      <th>いいね</th>
-      <th>ユーザー名</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+  <br />
+  <div class="row">
     <% @outfits.each do |outfit| %>
-       <tr id="outfit_<%= outfit.id %>">
+       <div class="col-xs-11 col-sm-5 col-md-4 col-lg-4" id="outfit_<%= outfit.id %>">
         <%= render 'outfit', outfit: outfit %>
-      </tr>
+      </div>
     <% end %>
-  </tbody>
-</table>
+  </div>
 
 <br>
 <% if proposer_signed_in? %>
