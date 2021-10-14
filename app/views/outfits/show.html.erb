@@ -1,26 +1,40 @@
+<div class="card-deck">
+  <div class="card md-4 mb-3">
+    <%= image_tag @outfit.image.variant(resize: '200x200') %>
+    <div class="card-body">
+      <div class="stock_button">
+        <% if user_signed_in? %>
+          <% if @stock.present? %>
+            <%= link_to 'お気に入り解除する', stock_path(id: @stock.id), method: :delete%>
+          <% else %>
+            <%= link_to 'お気に入りする', stocks_path(outfit_id: @outfit.id), method: :post%>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @outfit.title %>
-</p>
-
-<p>
-  <strong>Content:</strong>
-  <%= @outfit.content %>
-</p>
-
-<strong>image:</strong>
-<%= image_tag @outfit.image.variant(resize: '200x200') %>
-
-<div class="stock_button">
-<% if user_signed_in? %>
-  <% if @stock.present? %>
-    <%= link_to 'お気に入り解除する', stock_path(id: @stock.id), method: :delete%>
-  <% else %>
-    <%= link_to 'お気に入りする', stocks_path(outfit_id: @outfit.id), method: :post%>
-  <% end %>
-<% end %>
+  <div class="card h-75">
+    <div class="card-body text-left ">
+            
+      <p class="card-text">
+        <strong>Title:</strong><%= @outfit.title %>
+      </p>
+      <hr>
+      <p class="card-text">
+        <strong>Content:</strong><%= @outfit.content %>
+      </p>
+      <hr>
+      <p class="card-text">
+        <%= @outfit.created_at.strftime("%Y-%m-%d %H:%M") %>
+      </p>
+      <hr>
+      <p class="card-text">
+      <%= link_to 'Edit', edit_outfit_path(@outfit) %> | <%= link_to 'Back', outfits_path %>
+      </p>
+    </div>
+  </div>
 </div>
 
-<%= link_to 'Edit', edit_outfit_path(@outfit) %> |
-<%= link_to 'Back', outfits_path %>
+
+
