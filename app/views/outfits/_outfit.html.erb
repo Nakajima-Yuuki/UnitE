@@ -1,26 +1,29 @@
-
-
-    <td><%= outfit.title %></td>
-    <td><%= outfit.content %></td>
-    <td><%= image_tag outfit.image.first.variant(resize: '200x200') %></td>
-  <% if current_proposer.nil? && current_user.liked_by?(outfit.id) %>
-      <td>
-    <%= link_to destroy_like_path(outfit), class: "like-link", method: :DELETE, remote: true do %>
-      <i class="fa fa-heart unlike-btn"></i>
-    <% end %>
-    <%= outfit.likes.count %>
-  </td>
-  <% else %>
-       <td>
-    <%= link_to create_like_path(outfit), class: "like-link", method: :POST, remote: true do %>
-      <i class="fa fa-heart like-btn"></i>
-    <% end %>
-    <%= outfit.likes.count %>
-  </td>
-  <% end %>
-    <td><%= outfit.proposer.name %></td>
-    <td><%= link_to 'Show', outfit %></td>
-  <% if current_proposer == outfit.proposer %>
-    <td><%= link_to 'Edit', edit_outfit_path(outfit) %></td>
-    <td><%= link_to 'Destroy', outfit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  <% end %>
+<div class="card-deck">
+  <div class="card mb-3">
+    <%= link_to outfit_path(outfit) do %><%= image_tag outfit.image.variant(resize: "150x200"), class: "bd-placeholder-img card-img-top", style: "width=25%, height=200, focusable=false" %><% end %>
+    <div class="card-body">
+      <p class="card-text">
+        <small class="text-muted">
+          <% if current_proposer.nil? && current_user.liked_by?(outfit.id) %>
+            <%= link_to destroy_like_path(outfit), class: "like-link", method: :DELETE, remote: true do %>
+              <i class="fa fa-heart unlike-btn"></i>
+            <% end %>
+            <%= outfit.likes.count %>
+          <% else %>
+            <%= link_to create_like_path(outfit), class: "like-link", method: :POST, remote: true do %>
+              <i class="fa fa-heart like-btn"></i>
+            <% end %>
+            <%= outfit.likes.count %>
+          <% end %>
+        </small>
+      </p>
+      <p class="card-text"><%= outfit.proposer.name %></p>
+      <p class="card-text">
+        <% if current_proposer == outfit.proposer %>
+        <%= link_to 'Edit', edit_outfit_path(outfit) %>
+        <%= link_to 'Destroy', outfit, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </p>
+      <% end %>
+    </div>
+  </div>
+</div>

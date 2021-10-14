@@ -24,7 +24,7 @@
 <% @stocks.each do |stock| %>
       <tr>
         <td><%= stock.outfit.proposer.name %></td>
-        <td><%= image_tag (stock.outfit.image.first.variant(resize: '200x200')) %></td>
+        <td><%= image_tag (stock.outfit.image.variant(resize: '200x200')) %></td>
         <td><%= stock.outfit.title %></td>
         <td><%= stock.outfit.content %></td>
       </tr>
