@@ -64,15 +64,3 @@
     </div>
   </div>
 </div>
-
-
-<h1>マイページ</h1>
-<p>名前 : <%= @proposer.name %></p>
-<p>メールアドレス : <%= @proposer.email %></p>
-<p>プロフィール : <%= @proposer.profile %></p>
-<% if @proposer.avatar.attached? %>
-   <p><%= image_tag @proposer.avatar.variant(resize: '200x200') %></p>
-<% end %>
-
-<%= link_to 'プロフィール変更', edit_proposer_registration_path %>
-<td><%= link_to '投稿一覧', outfits_path %></td>
