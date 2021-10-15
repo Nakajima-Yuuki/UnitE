@@ -1,3 +1,71 @@
+
+  <div class="box">
+    <div id="overlay">
+       <% if @proposer.avatar.attached? %>
+        <div class="avatar_image"><%= image_tag @proposer.avatar.variant(resize: '200x200')%></div>
+        <% end %> 
+        <div class="trick">
+      </div><br><br><br><br>
+      <ul class="text"><%= @proposer.name %></ul>
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading " role="tab" id="headingOne">
+      <h4 class="panel-title ">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          <div class="title  btn btn-danger btn-outline btn-lg">Profile</div>
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+      <p><%= @proposer.profile %></p>
+      <%= link_to 'プロフィール変更', edit_user_registration_path %>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          <div class="title btn btn-danger btn-outline btn-lg">SOCIAL</div>
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body">
+        Walter has been building websites for years. He enjoys making unique websites and web projects. His hobbies include photography, woodworking, leatherworking, fishing, and mid century modern furniture.
+      </div>
+    </div>
+  </div>
+  
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingThree">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          <div class="title btn btn-danger btn-outline btn-lg">CONTACT</div>
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      <div class="panel-body">
+        
+        
+                  <form id="form" class="topBefore">
+            <input id="name" type="text" placeholder="NAME">
+            <input id="email" type="text" placeholder="E-MAIL">
+            <textarea id="message" type="text" placeholder="MESSAGE"></textarea>
+            <input id="submit" type="submit" value="Submit Now!">
+          </form>
+        
+        
+        
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <h1>マイページ</h1>
 <p>名前 : <%= @proposer.name %></p>
 <p>メールアドレス : <%= @proposer.email %></p>
