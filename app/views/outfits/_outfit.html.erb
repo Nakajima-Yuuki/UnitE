@@ -18,12 +18,6 @@
         </small>
       </p>
       <p class="card-text"><%= outfit.proposer.name %></p>
-      <p class="card-text">
-        <% if current_proposer == outfit.proposer %>
-        <%= link_to 'Edit', edit_outfit_path(outfit) %>
-        <%= link_to 'Destroy', outfit, method: :delete, data: { confirm: 'Are you sure?' } %>
-      </p>
-      <% end %>
     </div>
   </div>
 </div>

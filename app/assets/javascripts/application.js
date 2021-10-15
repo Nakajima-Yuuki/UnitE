@@ -17,3 +17,16 @@
 //= require popper.js/dist/umd/popper.js
 //= require bootstrap/dist/js/bootstrap.min
 //= require_tree .
+
+
+$(function() {
+    $('.hamburger').click(function() {
+        $(this).toggleClass('active');
+ 
+        if ($(this).hasClass('active')) {
+            $('.globalMenuSp').addClass('active');
+        } else {
+            $('.globalMenuSp').removeClass('active');
+        }
+    });
+});

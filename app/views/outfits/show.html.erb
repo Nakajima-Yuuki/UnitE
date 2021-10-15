@@ -29,9 +29,12 @@
         <%= @outfit.created_at.strftime("%Y-%m-%d %H:%M") %>
       </p>
       <hr>
+      <% if proposer_signed_in? %>
       <p class="card-text">
-      <%= link_to 'Edit', edit_outfit_path(@outfit) %> | <%= link_to 'Back', outfits_path %>
+      <%= link_to 'Edit', edit_outfit_path(@outfit) %> | <%= link_to 'Destroy', @outfit, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <p><%= link_to 'Back', outfits_path %></p>
       </p>
+      <% end %>
     </div>
   </div>
 </div>

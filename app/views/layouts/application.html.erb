@@ -14,25 +14,28 @@
         <div class="container-fluid">
           <nav class="navbar fixed-top bg-white p-0 pt-0 pb-0 mt-0">
             <a class="navbar-brand bg-white d-block mx-auto" href=""><%= image_tag "mojilogo.png", width: 100; %></a>
-            <% if user_signed_in? %>
-                <!--<%= link_to 'サインアップ', new_user_registration_path %>
-                <%= link_to 'ログイン', new_user_session_path %> -->
-                <%= link_to "マイページ", user_path(current_user.id) , class: "btn btn-outline-secondary"%>
-                <!--<%= link_to 'プロフィール変更', edit_user_registration_path %> -->
-                <%= link_to 'ログアウト', destroy_user_session_path, method: :delete , class: "btn btn-outline-secondary"%>
-            <% elsif proposer_signed_in? %>
-                <!--<%= link_to 'プロポーサーサインアップ', new_proposer_registration_path %>
-                <%= link_to 'プロポーサーログイン', new_proposer_session_path %> -->
-                <%= link_to "マイページ", proposer_path(current_proposer.id) , class: "btn btn-outline-secondary"%>
-                <!-- <%= link_to 'プロフィール変更', edit_proposer_registration_path %> -->
-                <%= link_to 'プロポーサーログアウト', destroy_proposer_session_path, method: :delete , class: "btn btn-outline-secondary"%>
-            <% else %>
-                <!--<%= link_to 'サインアップ', new_user_registration_path %>-->
-                <%= link_to 'Userログイン', new_user_session_path , class: "btn btn-outline-secondary"%>
-                <!--<%= link_to 'プロポーサーサインアップ', new_proposer_registration_path %>-->
-                <%= link_to 'Fashionistaログイン', new_proposer_session_path , class: "btn btn-outline-secondary"%>
-                <% end %>
-          </nav>
+              
+<div class="hamburger">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+<nav class="globalMenuSp">
+    <ul>
+        <% if user_signed_in? %>
+        <li><a href="#"><%= link_to "マイページ", user_path(current_user.id) %></a></li>
+        <li><a href="#"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></a></li>
+        <% elsif proposer_signed_in? %>
+        <li><a href="#"><%= link_to "マイページ", proposer_path(current_proposer.id) %></a></li>
+        <li><a href="#"><%= link_to 'ログアウト', destroy_proposer_session_path, method: :delete %></a></li>
+        <% else %>
+        <li><a href="#"><%= link_to 'Userログイン', new_user_session_path%></a></li>
+        <li><a href="#"><%= link_to 'Fashionistaログイン', new_proposer_session_path %></a></li>
+        <% end %>
+    </ul>
+</nav>
+
         </header>
     </div>
     <p class="notice"><%= notice %></p>
