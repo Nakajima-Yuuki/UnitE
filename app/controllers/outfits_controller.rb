@@ -14,7 +14,7 @@ class OutfitsController < ApplicationController
   def show
     @stock = current_user.stocks.find_by(outfit_id: @outfit.id)if current_user
     @stocks = @outfit.stocks_users
-    @outfit = current_proposer.outfits.find_by(outfit_id: @outfit.id)
+    #@outfit = current_proposer.outfits.find_by(outfit_id: @outfit.id)
   end
 
   # GET /outfits/new

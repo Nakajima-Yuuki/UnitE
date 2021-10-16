@@ -73,8 +73,10 @@
         <div class="card-body">
         <p><%= outfit.proposer.name %></p>
         </div>
-        <p><%= image_tag (outfit.image.variant(resize: '200x200')) %></p>
+        <% if proposer_signed_in? %>
+        <p><%= link_to outfit_path(outfit) do %><%= image_tag outfit.image.variant(resize: "150x200"), class: "bd-placeholder-img card-img-top", style: "width=25%, height=200, focusable=false" %><% end %></p>
       </div>
+        <% end %>
         <% end %>
     </div>
   </div>
