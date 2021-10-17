@@ -14,6 +14,7 @@ class OutfitsController < ApplicationController
   def show
     @stock = current_user.stocks.find_by(outfit_id: @outfit.id)if current_user
     @stocks = @outfit.stocks_users
+    #@outfit = current_proposer.outfits.find_by(outfit_id: @outfit.id)
   end
 
   # GET /outfits/new
@@ -59,6 +60,6 @@ class OutfitsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def outfit_params
-      params.require(:outfit).permit(:title, :content, :image)
+      params.require(:outfit).permit(:title, :content, :image).merge(proposer_id: current_proposer.id)
     end
 end
