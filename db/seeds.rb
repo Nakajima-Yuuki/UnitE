@@ -78,7 +78,8 @@ outfit = Outfit.new(
     content: "オレンジのニットがポイント",
   )
   outfit.image.attach(
-      io: File.open(Rails.root.join(db/images/outfit01.jpeg), filename:"outfit01.jpeg"),
+      io: File.open(Rails.root.join(db/images/outfit01.jpeg)),
+      filename:"outfit01.jpeg"
     )
   outfit.save!
 
@@ -88,7 +89,8 @@ outfit = Outfit.new(
     content: "オーバーサイズがポイント",
   )
   outfit.image.attach(
-      io: File.open(Rails.root.join(db/images/outfit02.jpeg), filename:"outfit02.jpeg"),
+      io: File.open(Rails.root.join(db/images/outfit02.jpeg)),
+      filename:"outfit02.jpeg"
     )
   outfit.save!
 
@@ -98,7 +100,8 @@ outfit = Outfit.new(
     content: "足元のコンバースが尚よし",
   )
   outfit.image.attach(
-      io: File.open(Rails.root.join(db/images/outfit03.jpeg), filename:"outfit04.jpeg"),
+      io: File.open(Rails.root.join(db/images/outfit03.jpeg)),
+      filename:"outfit03.jpeg"
     )
   outfit.save!
 
@@ -108,7 +111,8 @@ outfit = Outfit.new(
     content: "ニューバランスでスポーティーに",
   )
   outfit.image.attach(
-      io: File.open(Rails.root.join(db/images/outfit04.jpeg), filename:"outfit04.jpeg"),
+      io: File.open(Rails.root.join(db/images/outfit04.jpeg)),
+      filename:"outfit04.jpeg"
   )
   outfit.save!
 
@@ -118,6 +122,7 @@ outfit = Outfit.new(
     content: "柄で可愛く足元はストリートに！",
   )
   outfit.image.attach(
-      io: File.open(Rails.root.join(db/images/outfit05.jpeg), filename:"outfit05.jpeg"),
+      io: File.open(Rails.root.join(db/images/outfit05.jpeg)),
+      filename:"outfit05.jpeg"
     )
   outfit.save!
