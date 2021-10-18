@@ -32,6 +32,8 @@ gem 'ransack'
 #管理者権限
 gem 'cancancan'
 gem 'rails_admin'
+#seedデータ
+gem 'faker'
 
 
 group :development, :test do
