@@ -77,37 +77,37 @@ outfit = Outfit.new(
     title: "シャツコーデ",
     content: "オレンジのニットがポイント",
   )
-  outfit1.image.attach(io: File.open(db/images/outfit01.jpeg), filename:"outfit01.jpeg")
-  outfit1.save!
+  outfit.image.attach(io: File.open(db/images/outfit01.jpeg), filename:"outfit01.jpeg")
+  outfit.save!
 
   outfit = Outfit.new(
     proposer_id: proposer2.id,
     title: "フーディーコーデ",
     content: "オーバーサイズがポイント",
   )
-  outfit2.image.attach(io: File.open(db/images/outfit02.jpeg), filename:"outfit02.jpeg")
-  outfit2.save!
+  outfit.image.attach(io: File.open(db/images/outfit02.jpeg), filename:"outfit02.jpeg")
+  outfit.save!
 
   outfit = Outfit.new(
     proposer_id: proposer3.id,
     title: "ニットコーデ",
     content: "足元のコンバースが尚よし",
   )
-  outfit3.image.attach(io: File.open(db/images/outfit03.jpeg), filename:"outfit04.jpeg")
-  outfit3.save!
+  outfit.image.attach(io: File.open(db/images/outfit03.jpeg), filename:"outfit04.jpeg")
+  outfit.save!
 
   outfit = Outfit.new(
     proposer_id: proposer4.id,
     title: "ストリートコーデ",
     content: "ニューバランスでスポーティーに",
   )
-  outfit4.image.attach(io: File.open(db/images/outfit04.jpeg), filename:"outfit04.jpeg")
-  outfit4.save!
+  outfit.image.attach(io: File.open(db/images/outfit04.jpeg), filename:"outfit04.jpeg")
+  outfit.save!
 
   outfit = Outfit.new(
     proposer_id: proposer5.id,
     title: "ニットワンピコーデ",
     content: "柄で可愛く足元はストリートに！",
   )
-  outfit4.image.attach(io: File.open(db/images/outfit05.jpeg), filename:"outfit05.jpeg")
-  outfit4.save!
+  outfit.image.attach(io: File.open(db/images/outfit05.jpeg), filename:"outfit05.jpeg")
+  outfit.save!
