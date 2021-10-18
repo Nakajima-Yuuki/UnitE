@@ -6,17 +6,17 @@
 
   <div class="field">
     <%= f.label :username %><br />
-    <%= f.text_field :username, autofocus: true %>
+    <%= f.text_field :username, autofocus: true, :placeholder => "名前を入力" %>
   </div>
 
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", :placeholder => "メールアドレスを入力" %>
   </div>
 
   <div class="field">
     <%= f.label :profile %><br />
-    <%= f.text_area :profile, autofocus: true %>
+    <%= f.text_area :profile, autofocus: true, :placeholder => "プロフィールを入力" %>
   </div>
 
   <div class="field">
