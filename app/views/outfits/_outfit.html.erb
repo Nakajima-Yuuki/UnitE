@@ -1,6 +1,8 @@
 <div class="card-deck">
   <div class="card mb-3">
-    <%= link_to outfit_path(outfit) do %><%= image_tag outfit.image.variant(resize: "150x200"), class: "bd-placeholder-img card-img-top", style: "width=25%, height=200, focusable=false" %><% end %>
+    <% if outfit.image.present? %>
+      <%= link_to outfit_path(outfit) do %><%= image_tag outfit.image.variant(resize: "150x200"), class: "bd-placeholder-img card-img-top", style: "width=25%, height=200, focusable=false" %><% end %>
+    <% end %>
     <div class="card-body">
       <p class="card-text">
         <small class="text-muted">
