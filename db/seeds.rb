@@ -9,8 +9,8 @@
 # user
 user1 = User.create!(
     id: 1,
-    username: "uk",
-    email: "uk@g.com",
+    username: "管理者",
+    email: "admin_user@g.com",
     password: "111111",
     admin: true,
   )
@@ -42,8 +42,8 @@ user1 = User.create!(
 #proposer
 proposer1 = Proposer.create!(
     id: 1,
-    name: "rewo",
-    email: "rewo@g.com",
+    name: "uk",
+    email: "uk@g.com",
     password: "111111",
   )
 proposer2 = Proposer.create!(
@@ -126,3 +126,20 @@ outfit = Outfit.new(
       filename:"outfit05.jpeg"
     )
   outfit.save!
+
+  #いいね
+  5.times do |n|
+    Like.create!(
+    outfit_id: "#{n + 1}",
+    user_id: "#{n + 1}"
+    )
+  end
+
+  #保存
+  5.times do |n|
+    Stock.create!(
+      outfit_id: "#{n + 1}",
+      user_id: "#{n + 1}",
+      
+    )
+  end
