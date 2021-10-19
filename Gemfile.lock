@@ -90,6 +90,8 @@ GEM
     devise-i18n-views (0.3.7)
     erubi (1.10.0)
     execjs (2.8.1)
+    faker (2.19.0)
+      i18n (>= 1.6, < 2)
     ffi (1.15.4)
     font-awesome-sass (5.15.1)
       sassc (>= 1.11)
@@ -280,6 +282,7 @@ DEPENDENCIES
   devise
   devise-i18n
   devise-i18n-views
+  faker
   font-awesome-sass
   image_processing (~> 1.2)
   kaminari
