@@ -10,6 +10,12 @@
       redirect_to outfits_path, notice: 'ゲストユーザーとしてログインしました'
     end
 
+    def guest_admin_sign_in
+      user = User.admin_guest
+      sign_in user
+      redirect_to outfits_path, notice: '管理者ゲストユーザーとしてログインしました。'
+    end
+
     def ensure_not_proposer
       redirect_to outfits_path, notice: 'アクセス権限がありません' if current_proposer.present?
     end
