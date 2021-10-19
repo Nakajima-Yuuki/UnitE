@@ -8,32 +8,27 @@
 
 # user
 user1 = User.create!(
-    id: 1,
     username: "管理者",
     email: "admin_user@g.com",
     password: "111111",
     admin: true,
   )
   user2 = User.create!(
-    id: 2,
     username: "sano",
     email: "sano@g.com", 
     password: "111111",
   )
   user3 = User.create!(
-    id: 3,
     username: "ken",
     email: "ken@g.com", 
     password: "111111",
   )
   user4 = User.create!(
-    id: 4,
     username: "baji",
     email: "baji@g.com", 
     password: "111111",
   )
   user5 = User.create!(
-    id: 5,
     username: "taka",
     email: "taka@g.com",
     password: "111111",
@@ -41,36 +36,71 @@ user1 = User.create!(
 
 #proposer
 proposer1 = Proposer.create!(
-    id: 1,
     name: "uk",
     email: "uk@g.com",
     password: "111111",
   )
 proposer2 = Proposer.create!(
-    id: 2,
     name: "chihuyu",
     email: "chihuyu@g.com",
     password: "111111",
   )
   proposer3 = Proposer.create!(
-    id: 3,
     name: "shiba",
     email: "shiba@g.com",
     password: "111111",
   )
   proposer4 = Proposer.create!(
-    id: 4,
     name: "maki",
     email: "maki@g.com",
     password: "111111",
   )
   proposer5 = Proposer.create!(
-    id: 5,
     name: "asuka",
     email: "asuka@g.com",
     password: "111111",
   )
+  proposer6 = Proposer.create!(
+    name: "deku",
+    email: "deku@g.com",
+    password: "111111",
+  )
+  proposer7 = Proposer.create!(
+    name: "shota",
+    email: "shota@g.com",
+    password: "111111",
+  )
+  proposer8 = Proposer.create!(
+    name: "nara",
+    email: "nara@g.com",
+    password: "111111",
+  )
+  proposer9 = Proposer.create!(
+    name: "hase",
+    email: "hase@g.com",
+    password: "111111",
+  )
+  proposer10 = Proposer.create!(
+    name: "Lisa",
+    email: "Lisa@g.com",
+    password: "111111",
+  )
+  proposer11 = Proposer.create!(
+    name: "jun",
+    email: "jun@g.com",
+    password: "111111",
+  )
+  proposer11 = Proposer.create!(
+    name: "saya",
+    email: "saya@g.com",
+    password: "111111",
+  )
 
+  proposer12 = Proposer.create!(
+    name: "non",
+    email: "non@g.com",
+    password: "111111",
+  )
 #投稿
 outfit = Outfit.new(
     proposer_id: proposer1.id,
@@ -101,7 +131,7 @@ outfit = Outfit.new(
   )
   outfit.image.attach(
     io: File.open(Rails.root.join('db', 'images', 'outfit03.jpeg')),
-    ilename:"outfit03.jpeg"
+    filename:"outfit03.jpeg"
     )
   outfit.save!
 
@@ -124,6 +154,83 @@ outfit = Outfit.new(
   outfit.image.attach(
     io: File.open(Rails.root.join('db', 'images', 'outfit05.jpeg')),
     filename:"outfit05.jpeg"
+    )
+  outfit.save!
+  
+  outfit = Outfit.new(
+    proposer_id: proposer6.id,
+    title: "ロングコートコーデ",
+    content: "綺麗目＆ストリート！",
+  )
+  outfit.image.attach(
+    io: File.open(Rails.root.join('db', 'images', 'outfit06.jpeg')),
+    filename:"outfit06.jpeg"
+    )
+  outfit.save!
+
+  outfit = Outfit.new(
+    proposer_id: proposer7.id,
+    title: "ロングコートコーデ",
+    content: "綺麗目＆ストリート！",
+  )
+  outfit.image.attach(
+    io: File.open(Rails.root.join('db', 'images', 'outfit07.jpeg')),
+    filename:"outfit07.jpeg"
+    )
+  outfit.save!
+
+  outfit = Outfit.new(
+    proposer_id: proposer8.id,
+    title: "キルティングブルゾンコーデ",
+    content: "差し色に黄色でメリハリをつけました",
+  )
+  outfit.image.attach(
+    io: File.open(Rails.root.join('db', 'images', 'outfit08.jpeg')),
+    filename:"outfit08.jpeg"
+    )
+  outfit.save!
+
+  outfit = Outfit.new(
+    proposer_id: proposer9.id,
+    title: "フーディーコーデ",
+    content: "差し色に黄色でメリハリをつけました",
+  )
+  outfit.image.attach(
+    io: File.open(Rails.root.join('db', 'images', 'outfit09.jpeg')),
+    filename:"outfit09.jpeg"
+    )
+  outfit.save!
+
+  outfit = Outfit.new(
+    proposer_id: proposer10.id,
+    title: "シンプルコーデ",
+    content: "ボーダーのL/S、Tシャツで小洒落感",
+  )
+  outfit.image.attach(
+    io: File.open(Rails.root.join('db', 'images', 'outfit10.jpeg')),
+    filename:"outfit010.jpeg"
+    )
+  outfit.save!
+
+  outfit = Outfit.new(
+    proposer_id: proposer11.id,
+    title: "レイヤードニットコーデ",
+    content: "キレイめコーデにしてみました。",
+  )
+  outfit.image.attach(
+    io: File.open(Rails.root.join('db', 'images', 'outfit11.jpeg')),
+    filename:"outfit011.jpeg"
+    )
+  outfit.save!
+
+  outfit = Outfit.new(
+    proposer_id: proposer12.id,
+    title: "ラッフルデザインニットコーデ",
+    content: "キレイめコーデにしてみました。",
+  )
+  outfit.image.attach(
+    io: File.open(Rails.root.join('db', 'images', 'outfit12.jpeg')),
+    filename:"outfit012.jpeg"
     )
   outfit.save!
 
