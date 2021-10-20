@@ -103,9 +103,8 @@ proposer2 = Proposer.create!(
   )
 #投稿
 
-outfit = Outfit.new(
+outfit1 = Outfit.new(
     proposer_id: proposer1.id,
-    outfit_id: outfit1.id,
     title: "シャツコーデ",
     content: "オレンジのニットがポイント"
   )
@@ -115,7 +114,7 @@ outfit = Outfit.new(
   )
   outfit.save!
 
-  outfit = Outfit.new(
+  outfit2 = Outfit.new(
     proposer_id: proposer2.id,
     outfit_id: outfit2.id,
     title: "フーディーコーデ",
@@ -127,9 +126,8 @@ outfit = Outfit.new(
     )
   outfit.save!
 
-  outfit = Outfit.new(
+  outfit3 = Outfit.new(
     proposer_id: proposer3.id,
-    outfit_id: outfit3.id,
     title: "ニットコーデ",
     content: "足元のコンバースが尚よし",
   )
@@ -139,9 +137,8 @@ outfit = Outfit.new(
     )
   outfit.save!
 
-  outfit = Outfit.new(
+  outfit4 = Outfit.new(
     proposer_id: proposer4.id,
-    outfit_id: outfit4.id,
     title: "ストリートコーデ",
     content: "ニューバランスでスポーティーに",
   )
@@ -151,9 +148,8 @@ outfit = Outfit.new(
   )
   outfit.save!
 
-  outfit = Outfit.new(
+  outfit5 = Outfit.new(
     proposer_id: proposer5.id,
-    outfit_id: outfit5.id,
     title: "ニットワンピコーデ",
     content: "柄で可愛く足元はストリートに！",
   )
@@ -163,9 +159,8 @@ outfit = Outfit.new(
     )
   outfit.save!
   
-  outfit = Outfit.new(
+  outfit6 = Outfit.new(
     proposer_id: proposer6.id,
-    outfit_id: outfit6.id,
     title: "ロングコートコーデ",
     content: "綺麗目＆ストリート！",
   )
@@ -175,9 +170,8 @@ outfit = Outfit.new(
     )
   outfit.save!
 
-  outfit = Outfit.new(
+  outfit7 = Outfit.new(
     proposer_id: proposer7.id,
-    outfit_id: outfit7.id,
     title: "ロングコートコーデ",
     content: "綺麗目＆ストリート！",
   )
@@ -187,9 +181,8 @@ outfit = Outfit.new(
     )
   outfit.save!
 
-  outfit = Outfit.new(
+  outfit8 = Outfit.new(
     proposer_id: proposer8.id,
-    outfit_id: outfit8.id,
     title: "キルティングブルゾンコーデ",
     content: "差し色に黄色でメリハリをつけました",
   )
@@ -199,9 +192,8 @@ outfit = Outfit.new(
     )
   outfit.save!
 
-  outfit = Outfit.new(
+  outfit9 = Outfit.new(
     proposer_id: proposer9.id,
-    outfit_id: outfit9.id,
     title: "フーディーコーデ",
     content: "差し色に黄色でメリハリをつけました",
   )
@@ -211,9 +203,8 @@ outfit = Outfit.new(
     )
   outfit.save!
 
-  outfit = Outfit.new(
+  outfit10 = Outfit.new(
     proposer_id: proposer10.id,
-    outfit_id: outfit10.id,
     title: "シンプルコーデ",
     content: "ボーダーのL/S、Tシャツで小洒落感",
   )
@@ -223,9 +214,8 @@ outfit = Outfit.new(
     )
   outfit.save!
 
-  outfit = Outfit.new(
+  outfit11 = Outfit.new(
     proposer_id: proposer11.id,
-    outfit_id: outfit11.id,
     title: "レイヤードニットコーデ",
     content: "キレイめコーデにしてみました。",
   )
@@ -235,9 +225,8 @@ outfit = Outfit.new(
     )
   outfit.save!
 
-  outfit = Outfit.new(
+  outfit12 = Outfit.new(
     proposer_id: proposer12.id,
-    outfit_id: outfit12.id,
     title: "ラッフルデザインニットコーデ",
     content: "キレイめコーデにしてみました。",
   )
