@@ -108,11 +108,11 @@ outfit1 = Outfit.new(
     title: "シャツコーデ",
     content: "オレンジのニットがポイント"
   )
-  outfit.image.attach(
+  outfit1.image.attach(
     io: File.open(Rails.root.join('db', 'images', 'outfit01.jpeg')),
     filename:"outfit01.jpeg"
   )
-  outfit.save!
+  outfit1.save!
 
   outfit2 = Outfit.new(
     proposer_id: proposer2.id,
@@ -120,121 +120,121 @@ outfit1 = Outfit.new(
     title: "フーディーコーデ",
     content: "オーバーサイズがポイント",
   )
-  outfit.image.attach(
+  outfit2.image.attach(
     io: File.open(Rails.root.join('db', 'images', 'outfit02.jpeg')),
     filename:"outfit02.jpeg"
     )
-  outfit.save!
+  outfit2.save!
 
   outfit3 = Outfit.new(
     proposer_id: proposer3.id,
     title: "ニットコーデ",
     content: "足元のコンバースが尚よし",
   )
-  outfit.image.attach(
+  outfit3.image.attach(
     io: File.open(Rails.root.join('db', 'images', 'outfit03.jpeg')),
     filename:"outfit03.jpeg"
     )
-  outfit.save!
+  outfit3.save!
 
   outfit4 = Outfit.new(
     proposer_id: proposer4.id,
     title: "ストリートコーデ",
     content: "ニューバランスでスポーティーに",
   )
-  outfit.image.attach(
+  outfit4.image.attach(
     io: File.open(Rails.root.join('db', 'images', 'outfit04.jpeg')),
     filename:"outfit04.jpeg"
   )
-  outfit.save!
+  outfit4.save!
 
   outfit5 = Outfit.new(
     proposer_id: proposer5.id,
     title: "ニットワンピコーデ",
     content: "柄で可愛く足元はストリートに！",
   )
-  outfit.image.attach(
+  outfit5.image.attach(
     io: File.open(Rails.root.join('db', 'images', 'outfit05.jpeg')),
     filename:"outfit05.jpeg"
     )
-  outfit.save!
+  outfit5.save!
   
   outfit6 = Outfit.new(
     proposer_id: proposer6.id,
     title: "ロングコートコーデ",
     content: "綺麗目＆ストリート！",
   )
-  outfit.image.attach(
+  outfit6.image.attach(
     io: File.open(Rails.root.join('db', 'images', 'outfit06.jpeg')),
     filename:"outfit06.jpeg"
     )
-  outfit.save!
+  outfit6.save!
 
   outfit7 = Outfit.new(
     proposer_id: proposer7.id,
     title: "ロングコートコーデ",
     content: "綺麗目＆ストリート！",
   )
-  outfit.image.attach(
+  outfit7.image.attach(
     io: File.open(Rails.root.join('db', 'images', 'outfit07.jpeg')),
     filename:"outfit07.jpeg"
     )
-  outfit.save!
+  outfit7.save!
 
   outfit8 = Outfit.new(
     proposer_id: proposer8.id,
     title: "キルティングブルゾンコーデ",
     content: "差し色に黄色でメリハリをつけました",
   )
-  outfit.image.attach(
+  outfit8.image.attach(
     io: File.open(Rails.root.join('db', 'images', 'outfit08.jpeg')),
     filename:"outfit08.jpeg"
     )
-  outfit.save!
+  outfit8.save!
 
   outfit9 = Outfit.new(
     proposer_id: proposer9.id,
     title: "フーディーコーデ",
     content: "差し色に黄色でメリハリをつけました",
   )
-  outfit.image.attach(
+  outfit9.image.attach(
     io: File.open(Rails.root.join('db', 'images', 'outfit09.jpeg')),
     filename:"outfit09.jpeg"
     )
-  outfit.save!
+  outfit9.save!
 
   outfit10 = Outfit.new(
     proposer_id: proposer10.id,
     title: "シンプルコーデ",
     content: "ボーダーのL/S、Tシャツで小洒落感",
   )
-  outfit.image.attach(
+  outfit10.image.attach(
     io: File.open(Rails.root.join('db', 'images', 'outfit10.jpeg')),
     filename:"outfit010.jpeg"
     )
-  outfit.save!
+  outfit10.save!
 
   outfit11 = Outfit.new(
     proposer_id: proposer11.id,
     title: "レイヤードニットコーデ",
     content: "キレイめコーデにしてみました。",
   )
-  outfit.image.attach(
+  outfit11.image.attach(
     io: File.open(Rails.root.join('db', 'images', 'outfit11.jpeg')),
     filename:"outfit011.jpeg"
     )
-  outfit.save!
+  outfit11.save!
 
   outfit12 = Outfit.new(
     proposer_id: proposer12.id,
     title: "ラッフルデザインニットコーデ",
     content: "キレイめコーデにしてみました。",
   )
-  outfit.image.attach(
+  outfit12.image.attach(
     io: File.open(Rails.root.join('db', 'images', 'outfit12.jpeg')),
     filename:"outfit012.jpeg"
     )
-  outfit.save!
+  outfit12.save!
 
   #いいね
   5.times do |n|
