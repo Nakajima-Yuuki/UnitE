@@ -122,10 +122,10 @@ outfit = Outfit.new(
   )
   outfit.image.attach(
     # io: File.open(Rails.root.join('db', 'images', 'outfit01.jpeg')),
-    io: File.open(Rails.root.join("db/images/outfit01.jpeg")),
+    io: File.open(Rails.root.join("app/assets/images/outfit01.jpeg")),
     # io: Rails.root.join("db/images/outfit01.jpeg").open
     filename:"outfit01.jpeg"
-    )
+  )
   outfit.save!
 
 # =============ここからcomment=============
