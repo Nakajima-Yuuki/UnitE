@@ -103,18 +103,6 @@ proposer2 = Proposer.create!(
   )
 #投稿
 
-# Outfit.create!(
-#   proposer_id: proposer1.id,
-#   title: "シャツコーデ",
-#   content: "オレンジのニットがポイント",
-#   image: Rails.root.join("db/images/outfit01.jpeg").open
-# )
-
-
-# user = User.find(1)
-# user.image.attach(io: File.open('app/assets/images/test.jpg'), filename: 'test.jpg')
-
-
 outfit = Outfit.new(
     proposer_id: proposer1.id,
     title: "シャツコーデ",
@@ -122,8 +110,6 @@ outfit = Outfit.new(
   )
   outfit.image.attach(
     io: File.open(Rails.root.join('db', 'images', 'outfit01.jpeg')),
-    #io: File.open(Rails.root.join("app/assets/images/outfit01.jpeg")),
-    # io: Rails.root.join("db/images/outfit01.jpeg").open
     filename:"outfit01.jpeg"
   )
   outfit.save!
