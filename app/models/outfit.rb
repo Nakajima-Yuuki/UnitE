@@ -1,7 +1,6 @@
 class Outfit < ApplicationRecord
     validates :title, presence: true
     validates :content, presence: true
-    validates :stocks, presence: true
     belongs_to :proposer
     has_one_attached :image
     has_many :stocks, dependent: :destroy
