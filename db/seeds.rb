@@ -246,10 +246,28 @@ outfit = Outfit.new(
   end
 
   #保存
-  5.times do |n|
-    Stock.create!(
-      outfit_id: "#{n + 1}",
-      user_id: "#{n + 1}",
 
+    Stock.create!(
+      user_id: user1.id,
+      outfit_id: outfit1.id,
     )
-  end
+  
+    Stock.create!(
+      user_id: user2.id,
+      outfit_id: trip2.id,
+    )
+  
+    Stock.create!(
+      user_id: user4.id,
+      outfit_id: outfit4.id,
+    )
+  
+    Stock.create!(
+      user_id: user5.id,
+      outfit_id: outfit3.id,
+    )
+  
+    Stock.create!(
+      user_id: user1.id,
+      outfit_id: outfit6.id,
+    )
