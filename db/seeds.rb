@@ -102,16 +102,19 @@ proposer2 = Proposer.create!(
     password: "111111",
   )
 #投稿
+
 outfit = Outfit.new(
     proposer_id: proposer1.id,
     title: "シャツコーデ",
-    content: "オレンジのニットがポイント",
+    content: "オレンジのニットがポイント"
   )
   outfit.image.attach(
     io: File.open(Rails.root.join('db', 'images', 'outfit01.jpeg')),
     filename:"outfit01.jpeg"
-    )
+  )
   outfit.save!
+
+# =============ここからcomment=============
 
   outfit = Outfit.new(
     proposer_id: proposer2.id,

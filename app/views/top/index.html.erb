@@ -1,39 +1,41 @@
 <div id="header">
-       <div class="area">
-          <p><%= image_tag "biglogo.png", width:150; %></p> 
-         <p><div class="scrolldown2"><span>Scroll</span></div></p>
-      </div>
+  <div class="area">
+    <p><%= image_tag "biglogo.png", width:150; %></p> 
+    <p><div class="scrolldown2"><span>Scroll</span></div></p>
+  </div>
 </div>
 
-      <div class="cd-fixed-bg cd-bg-1"></div>
-   <div class="area">
-      <p><h2>UnitE</h2></p>  
-      <p>お洒落はしたいけど上手くコーディネートが出来ない</p>
-      <p>そんな悩みを抱えてる方々に毎日のコーディネートのヒントを</p>
-      <p>スタイリストやショップ店員がアイデアをお届けします！</p> 
-   </div>
+<div class="cd-fixed-bg cd-bg-1"></div>
+  <div class="area">
+    <p><h2>UnitE</h2></p>  
+    <p>お洒落はしたいけど上手くコーディネートが出来ない</p>
+    <p>そんな悩みを抱えてる方々に毎日のコーディネートのヒントを</p>
+    <p>スタイリストやショップ店員がアイデアをお届けします！</p> 
+  </div>
 
-     <br>
-   <div class="cd-fixed-bg cd-bg-1"></div>
+  <br>
+  <div class="cd-fixed-bg cd-bg-1"></div>
     <div class="col-md-12">
       <div class="card text-center">
-        <div class="card-body">
-          <p class="card-text text-dark">
-            <strong>GuestFashionistaログイン</strong><br><br>
-          <a><%= link_to 'ログイン', proposers_guest_sign_in_path, method: :post, class: "btn btn-outline-secondary" %></a>
-          </p>
-          <hr>
-          <p class="card-text text-dark">
-            <strong>GuestUserログイン</strong><br><br>
-          <a><%= link_to 'ログイン', users_guest_sign_in_path, method: :post, class: "btn btn-outline-secondary" %></a>
-          </p>
-          <hr>
-          <p class="card-text text-dark">
-            <strong>GuestAdminログイン</strong><br><br>
-          <a><%= link_to 'ログイン', users_guest_admin_sign_in_path, method: :post, class:"btn btn-outline-secondary"  %></a>
-          </p>
-        </div>
+        <% unless current_user || current_proposer %>
+          <div class="card-body">
+            <p class="card-text text-dark">
+              <strong>GuestFashionistaログイン</strong><br><br>
+                <a><%= link_to 'ログイン', proposers_guest_sign_in_path, method: :post, class: "btn btn-outline-secondary" %></a>
+                </p>
+                <hr>
+                <p class="card-text text-dark">
+                <strong>GuestUserログイン</strong><br><br>
+                <a><%= link_to 'ログイン', users_guest_sign_in_path, method: :post, class: "btn btn-outline-secondary" %></a> 
+                </p>
+                <hr>
+                <p class="card-text text-dark">
+                <strong>GuestAdminログイン</strong><br><br>
+                <a><%= link_to 'ログイン', users_guest_admin_sign_in_path, method: :post, class:"btn btn-outline-secondary"  %></a>
+            </p>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>
- </div> 
+  </div> 
