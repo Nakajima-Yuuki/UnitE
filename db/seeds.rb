@@ -116,7 +116,6 @@ outfit1 = Outfit.new(
 
   outfit2 = Outfit.new(
     proposer_id: proposer2.id,
-    outfit_id: outfit2.id,
     title: "フーディーコーデ",
     content: "オーバーサイズがポイント",
   )
