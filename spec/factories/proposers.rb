@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :proposer do
-    name { 'Proposer01' }
-    email { 'proposer01@example.com' }
+    name { 'proposer01' }
+    email { 'proposer01@gmail.com' }
     password { 'password' }
     password_confirmation { 'password' }
   end

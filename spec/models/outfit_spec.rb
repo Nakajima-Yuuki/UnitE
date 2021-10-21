@@ -4,7 +4,7 @@ RSpec.describe '投稿機能', type: :model do
 
   describe 'バリデーションのテスト' do
     before do
-      @user = FactoryBot.create(:user1)
+      @proposer = FactoryBot.create(:proposer)
     end
     context 'タイトルが空の場合' do
       it 'バリデーションに引っかかる' do
@@ -21,7 +21,7 @@ RSpec.describe '投稿機能', type: :model do
     context '投稿のタイトルと詳細に内容が記載されている場合' do
       it 'バリデーションが通る' do
         #@userはbeforeで作ったインスタンス変数
-        outfit = Outfit.new(title: "テスト", content: "成功", user_id: @user.id)
+        outfit = Outfit.new(title: "テスト", content: "成功", proposer_id: @proposer.id)
         expect(outfit).to be_valid
       end
     end

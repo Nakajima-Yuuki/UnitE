@@ -6,7 +6,7 @@ RSpec.describe 'ユーザー登録機能', type: :model do
     context '名前が空の場合' do
       it 'バリデーションに引っかかる' do
         user = FactoryBot.create(:user1)
-        user.name = ""
+        user.username = ""
         expect(user).not_to be_valid
       end
     end
@@ -27,7 +27,7 @@ RSpec.describe 'ユーザー登録機能', type: :model do
     context '名前が20文字以上の場合' do
       it 'バリデーションに引っかかる' do
         user = FactoryBot.create(:user1)
-        user.name = "a" * 25
+        user.username = "a" * 25
         expect(user).not_to be_valid
       end
     end
@@ -47,7 +47,7 @@ RSpec.describe 'ユーザー登録機能', type: :model do
     end
     context '名前とメールアドレスとパスワードが内容が入力されている場合' do
       it '登録される' do
-        user = User.new(name: "test", email: "test@gmail.com", password: "123456", password_confirmation: "123456")
+        user = User.new(username: "test", email: "test@gmail.com", password: "123456", password_confirmation: "123456")
         expect(user).to be_valid
       end
     end
