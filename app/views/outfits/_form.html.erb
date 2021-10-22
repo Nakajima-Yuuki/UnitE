@@ -19,13 +19,13 @@
 
     <div class="field">
         <%= form.label :content %>
-        <%= form.text_area :content, :placeholder => "詳細を入力" %>
+        <%= form.text_area :content, :size=>"60x60",:placeholder => "詳細を入力" %>
     </div>
 
     <div class="field">
       <%= form.label :image %>
-      <%= form.file_field :image, autofocus: false %>
-      <%= form.hidden_field :image_cache %>
+      <p><%= form.file_field :image, autofocus: false %></p>
+      <p><%= form.hidden_field :image_cache %></p>
     </div>
 
     <div class="actions">

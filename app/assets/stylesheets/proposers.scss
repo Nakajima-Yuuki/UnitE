@@ -189,7 +189,8 @@ body {
     font-family: raleway;
   }
   textarea {
-    //width: 60%;
+    width: 60%;
+    resize: vertical;
     max-width: 100%;
     height: 110px;
     max-height: 110px;
