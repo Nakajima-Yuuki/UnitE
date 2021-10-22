@@ -31,7 +31,7 @@ class OutfitsController < ApplicationController
     @outfit = current_proposer.outfits.build(outfit_params)
 
     if @outfit.save
-      redirect_to @outfit, notice: 'Outfit was successfully created.'
+      redirect_to @outfit, notice: '投稿しました'
     else
       render :new
     end
@@ -40,7 +40,7 @@ class OutfitsController < ApplicationController
   # PATCH/PUT /outfits/1
   def update
     if @outfit.update(outfit_params)
-      redirect_to @outfit, notice: 'Outfit was successfully updated.'
+      redirect_to @outfit, notice: '投稿を更新しました'
     else
       render :edit
     end
@@ -49,7 +49,7 @@ class OutfitsController < ApplicationController
   # DELETE /outfits/1
   def destroy
     @outfit.destroy
-    redirect_to outfits_url, notice: 'Outfit was successfully destroyed.'
+    redirect_to outfits_url, notice: '投稿を削除しました'
   end
 
   private
