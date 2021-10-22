@@ -29,14 +29,12 @@
         <%= @outfit.created_at.strftime("%Y-%m-%d %H:%M") %>
       </p>
       <hr>
-      <% if proposer_signed_in? %>
       <p class="card-text">
-      <% if current_proposer%>
+      <% if @outfit.proposer == current_proposer%>
         <%= link_to '編集', edit_outfit_path(@outfit) %> | <%= link_to '削除', @outfit, method: :delete, data: { confirm: '本当に削除しますか?' } %>
       <% end %>
         <p><%= link_to '戻る', outfits_path %></p>
       </p>
-      <% end %>
     </div>
   </div>
 </div>
