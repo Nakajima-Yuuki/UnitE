@@ -1,5 +1,5 @@
 class ProposersController < ApplicationController
-
+  before_action :authenticate_proposer!
   def index
     
   end
@@ -7,7 +7,6 @@ class ProposersController < ApplicationController
   def show
     @proposer = Proposer.find(params[:id])
     @outfits = Outfit.all
-    #@outfit = Outfit.where(proposer_id: @proposer.id)
     @myoutfits = current_proposer.outfits
   end
 end

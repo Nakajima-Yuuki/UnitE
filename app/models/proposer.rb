@@ -4,8 +4,9 @@ class Proposer < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   
-  validates :name, presence: true #追記
-  validates :profile, length: { maximum: 200 } #追記
+  validates :name, presence: true, length: { maximum: 20 }
+  validates :email, presence: true, length: { maximum: 50 }
+  validates :password, presence: true, length: { maximum: 50 }
   has_one_attached :avatar
   has_many :outfits, dependent: :destroy
 

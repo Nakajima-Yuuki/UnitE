@@ -31,8 +31,10 @@
       <hr>
       <% if proposer_signed_in? %>
       <p class="card-text">
-      <%= link_to 'Edit', edit_outfit_path(@outfit) %> | <%= link_to 'Destroy', @outfit, method: :delete, data: { confirm: 'Are you sure?' } %>
-      <p><%= link_to 'Back', outfits_path %></p>
+      <% if current_proposer%>
+        <%= link_to '編集', edit_outfit_path(@outfit) %> | <%= link_to '削除', @outfit, method: :delete, data: { confirm: '本当に削除しますか?' } %>
+      <% end %>
+        <p><%= link_to '戻る', outfits_path %></p>
       </p>
       <% end %>
     </div>
