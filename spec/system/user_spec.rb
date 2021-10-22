@@ -70,12 +70,6 @@ RSpec.describe 'ユーザー管理機能', type: :system do
       expect(page).to have_content 'ログアウトしました。'
       end
     end
-    context 'ユーザーがログインしていない場合' do
-      it '投稿一覧に飛ぼうとした時、ログイン画面に遷移すること' do
-      visit outfits_path
-      expect(page).to have_content 'ログインもしくはアカウント登録してください。'
-      end
-    end    
   end 
   describe '管理画面のテスト' do
     before do

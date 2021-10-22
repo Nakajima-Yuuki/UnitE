@@ -6,9 +6,11 @@
     <div class="card-body">
       <p class="card-text">
         <small class="text-muted">
+          <!--<% if user_signed_in? || proposer_signed_in? %>-->
           <% if current_proposer.nil? && current_user.liked_by?(outfit.id) %>
             <%= link_to destroy_like_path(outfit), class: "like-link", method: :DELETE, remote: true do %>
               <i class="fa fa-heart unlike-btn"></i>
+            <!--<% end %>-->
             <% end %>
             <%= outfit.likes.count %>
           <% else %>

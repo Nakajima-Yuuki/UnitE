@@ -69,25 +69,17 @@ RSpec.describe 'ファッショニスタ管理機能', type: :system do
         click_link 'ログアウト'
       expect(page).to have_content 'ログアウトしました。'
       end
-    end
-    context 'ファッショニスタがログインしていない場合' do
-      it '投稿一覧に飛ぼうとした時、ログイン画面に遷移すること' do
-        binding.irb
-      visit outfits_path
-      expect(page).to have_content 'ログインもしくはアカウント登録してください。'
-      end
-    end    
+    end  
   end 
   describe 'ゲストログイン機能' do
     before do
-      @user = User.create(username: "test", email: "test@gmail.com", password: "123456", password_confirmation: "123456", admin: "true")
-      @user_second = User.create(username: "test2", email: "test2@gmail.com", password: "123456", password_confirmation: "123456", admin: "false" )
+      @proposer = Proposer.create(name: "test", email: "test@gmail.com", password: "123456", password_confirmation: "123456")
     end
-    context 'ユーザーがゲストログインをした場合' do
+    context 'ファッショニスタがゲストログインをした場合' do
       it 'ゲストログインができる' do
         visit root_path
-        click_on 'ログイン'
-        expect(page).to have_content 'ゲストユーザーとしてログインしました。'
+        all(".btn")[0].click
+        expect(page).to have_content 'ゲストファッショニスタとしてログインしました。'
       end
     end
   end
