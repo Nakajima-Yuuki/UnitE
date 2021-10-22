@@ -1,6 +1,5 @@
 class OutfitsController < ApplicationController
   before_action :authenticate_proposer!, only: %i[new create edit update destroy]
-  before_action :authenticate_user!, only: %i[show]
   before_action :set_outfit, only: [:show, :edit, :update, :destroy]
   
 

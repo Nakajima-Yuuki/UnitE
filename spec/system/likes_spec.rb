@@ -21,7 +21,7 @@ RSpec.describe 'いいね機能', type: :system do
     end
     context '投稿にいいねをつけた場合' do
       it '1が表示される' do
-        sleep 1.0
+        sleep 2.0
         expect(first('.text-muted').text).to have_content 1
       end
     end
@@ -36,10 +36,11 @@ RSpec.describe 'いいね機能', type: :system do
     end
     context 'いいねを外す' do
       it '0が表示される' do
+        binding.irb
         all(".like-link")[1].click
-        sleep 1.0
+        sleep 2.0
         all(".like-link")[1].click
-        sleep 1.0
+        sleep 2.0
         expect(first('.text-muted').text).to have_content 0
       end
     end

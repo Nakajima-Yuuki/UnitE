@@ -33,6 +33,7 @@ RSpec.describe '投稿機能', type: :system do
           fill_in 'proposer_email', with: 'proposer01@gmail.com'
           fill_in 'proposer_password', with: '111111'
           click_button 'ログイン' 
+          binding.irb
           visit outfits_path
         end
         context '一覧画面に遷移した場合' do
