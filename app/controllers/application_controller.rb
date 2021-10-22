@@ -5,12 +5,28 @@ class ApplicationController < ActionController::Base
   # ログイン済ユーザーのみにアクセスを許可する
   #before_action :authenticate_user!
   #before_action :authenticate_proposer!
-  
+  def autheniticate_user
+    if @current_user==nil
+      flash[:notice]="ログインが必要です"
+      redirect_to("/login")
+    end
+  end
+
+  def autheniticate_proposer
+    if @current_proposer==nil
+      flash[:notice]="ログインが必要です"
+      redirect_to("/login")
+    end
+  end
+
+
   def after_sign_in_path_for(resource)
     case resource
     when User
       outfits_path
     when Proposer
+      outfits_path
+    when Admin
       outfits_path
     end
   end

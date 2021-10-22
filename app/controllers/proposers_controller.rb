@@ -1,5 +1,5 @@
 class ProposersController < ApplicationController
-
+  before_action :authenticate_proposer!
   def index
     
   end

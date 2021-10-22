@@ -1,5 +1,6 @@
 class OutfitsController < ApplicationController
   before_action :authenticate_proposer!, only: %i[new create edit update destroy]
+  before_action :authenticate_user!#, only: %i[show]
   before_action :set_outfit, only: [:show, :edit, :update, :destroy]
   
 
@@ -8,6 +9,7 @@ class OutfitsController < ApplicationController
     @outfits = Outfit.all
     @q = Outfit.ransack(params[:q])
     @outfits = @q.result.includes(:proposer).page(params[:page]).order("created_at desc")
+    flash[:notice] = "ログイン済ユーザーのみ記事の詳細を確認できます" unless user_signed_in?
   end
 
   # GET /outfits/1
