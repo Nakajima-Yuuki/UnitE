@@ -1,5 +1,4 @@
 # frozen_string_literal: true
-
 class Users::RegistrationsController < Devise::RegistrationsController
   before_action :authenticate_user!
   before_action :configure_sign_up_params, only: [:create]
@@ -9,6 +8,17 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def ensure_normal_user
     if resource.email == 'guest@example.com'
       redirect_to outfits_path, alert: 'ゲストユーザーの更新・削除はできません。'
+    end
+  end
+
+  def update
+    @user = User.find(current_user.id)
+    if @user.update_without_current_password(params[:user])
+      sign_in @user, bypass: true
+      set_flash_message :notice, :updated
+      redirect_to after_update_path_for(@user)
+    else
+      render 'edit'
     end
   end
   # GET /resource/sign_up
@@ -63,9 +73,12 @@ class Users::RegistrationsController < Devise::RegistrationsController
    end
 
    def after_update_path_for(resource)
-    user_path(id: current_user.id)
+    users_path(id: current_user.id)
    end
-
+  
+   def update_resource(resource, params)
+    resource.update_without_current_password(params)
+   end
   # The path used after sign up for inactive accounts.
   # def after_inactive_sign_up_path_for(resource)
   #   super(resource)
