@@ -33,7 +33,6 @@ RSpec.describe '投稿機能', type: :system do
           fill_in 'proposer_email', with: 'proposer01@gmail.com'
           fill_in 'proposer_password', with: '111111'
           click_button 'ログイン' 
-          binding.irb
           visit outfits_path
         end
         context '一覧画面に遷移した場合' do
@@ -49,6 +48,7 @@ RSpec.describe '投稿機能', type: :system do
           end
         end
       end
+      
       describe '投稿編集機能' do
         before do
           visit new_proposer_session_path
@@ -66,24 +66,36 @@ RSpec.describe '投稿機能', type: :system do
             expect(page).to have_content 'edit_title'
           end
         end
+        context '他人の記事を編集をした場合' do
+          it '他人の投稿は編集できない' do 
+            visit outfit_path(@outfit2.id)
+            expect(page).to_not have_content '編集'
+          end
+        end
+        context '他人の記事を編集をした場合' do
+          it '他人の投稿は削除できない' do 
+            visit outfit_path(@outfit2.id)
+            expect(page).to_not have_content '削除'
+          end
+        end
+      end
     
       describe '投稿削除機能' do
+        before do
+          visit new_proposer_session_path
+          fill_in 'proposer_email', with: 'proposer01@gmail.com'
+          fill_in 'proposer_password', with: '111111'
+          click_button 'ログイン' 
+      end
         context '投稿を削除した場合' do      
           it '削除表示がされる' do
-            visit outfits_path
             all('.card-img-top')[1].click
-            # visit outfits_path(@outfit.id)
             click_link '削除'
-            # expect {
-            #   page.accept_confirm "本当に削除しますか？"
-            # #   expect(page).to have_content "本当に削除しますか？"
-            # }#.to change { Outfit.count }.by(-1)
             page.driver.browser.switch_to.alert.accept
             expect(page).to have_content '投稿を削除しました'
             end
           end
         end
-      end
     
       describe '検索機能' do
         before do
@@ -92,9 +104,9 @@ RSpec.describe '投稿機能', type: :system do
           fill_in 'proposer_password', with: '111111'
           click_button 'ログイン' 
         end
-        context '検索をした場合' do
+         context '検索をした場合' do
           it "検索キーワードを含む記事で絞り込まれる" do
-            fill_in 'q[title_or_content_cont]', with: 'test_title'
+            fill_in 'q[title_or_content_cont]', with: 'test_title2'
             click_button '検索'
             expect(page).to have_content 'test_title'
           end
@@ -105,5 +117,4 @@ RSpec.describe '投稿機能', type: :system do
           end
         end
       end
-
-end
+    end
