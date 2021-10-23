@@ -36,7 +36,6 @@ RSpec.describe 'いいね機能', type: :system do
     end
     context 'いいねを外す' do
       it '0が表示される' do
-        binding.irb
         all(".like-link")[1].click
         sleep 2.0
         all(".like-link")[1].click
