@@ -1,6 +1,6 @@
 <%= form_with(model: outfit, local: true) do |form| %>
     <% if outfit.errors.any? %>
-        <div id="error_explanation">
+        <div id="error_explanation1">
         <h2><%= pluralize(outfit.errors.count, "件") %> の項目を入力してください</h2>
         <ul>
           <% outfit.errors.full_messages.each do |message| %>
