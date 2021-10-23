@@ -25,6 +25,10 @@ class OutfitsController < ApplicationController
 
   # GET /outfits/1/edit
   def edit
+    unless @outfit.proposer == current_proposer
+      redirect_to @outfit, alert: '投稿者以外は編集できません'
+      
+    end
   end
 
   # POST /outfits
