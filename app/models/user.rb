@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   validates :username, presence: true, length: { maximum: 20 }
   validates :email, presence: true, length: { maximum: 50 }
-  validates :password, presence: true, length: { maximum: 50 }
+  attr_accessor :current_password
   has_one_attached :avatar
   has_many :stocks, dependent: :destroy
   has_many :likes, dependent: :destroy
@@ -28,5 +28,16 @@ class User < ApplicationRecord
       user.password = SecureRandom.urlsafe_base64
       user.admin = true
     end
+  end
+
+  def update_without_current_password(params, *options)
+    if params[:password].blank? && params[:password_confirmation].blank?
+      params.delete(:password)
+      params.delete(:password_confirmation)
+    end
+
+    result = update(params, *options)
+    clean_up_passwords
+    result
   end
 end

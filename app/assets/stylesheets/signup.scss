@@ -3,7 +3,15 @@
     //padding: 0px;
     text-decoration: none;
   }
+
+  form#edit_user {
+    margin-left: 550px;
+}
   
+form#edit_proposer {
+  margin-left: 550px;
+}
+
   .box1 {
     width: 350px;
     height: 600px;
@@ -96,7 +104,7 @@
   .remember {
     font-size: 13px;
     margin-top: 18px;
-    padding-left: 50px;
+    text-align: center;
   }
   
   .box-newusr p {
