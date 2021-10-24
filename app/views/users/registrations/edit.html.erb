@@ -30,7 +30,7 @@
 
   <div class="field">
     <%= f.label :password %> <i>(変更したくない場合は空白のままにします)</i><br />
-    <%= f.password_field :password, autocomplete: "new-password", :placeholder => "パスワードをを入力" %>
+    <%= f.password_field :password, autocomplete: "new-password", :placeholder => "パスワードを入力" %>
     <% if @minimum_password_length %>
       <br />
       <em><%= @minimum_password_length %> 文字以上</em>
@@ -39,12 +39,12 @@
 
   <div class="field">
     <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password", :placeholder => "パスワードをを入力" %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", :placeholder => "パスワードを入力" %>
   </div>
 
   <div class="field">
     <%= f.label :current_password %> <i>(変更を確認するには、現在のパスワードが必要です)</i><br />
-    <%= f.password_field :current_password, autocomplete: "current-password", :placeholder => "パスワードをを入力" %>
+    <%= f.password_field :current_password, autocomplete: "current-password", :placeholder => "パスワードを入力" %>
   </div>
 
   <div class="actions">
