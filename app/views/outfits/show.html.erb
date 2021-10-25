@@ -31,13 +31,11 @@
       <hr>
       <p class="card-text">
       <% if @outfit.proposer == current_proposer%>
-        <%= link_to '編集', edit_outfit_path(@outfit) %> | <%= link_to '削除', @outfit, method: :delete, data: { confirm: '本当に削除しますか?' } %>
+        <%= link_to edit_outfit_path(@outfit) do %><i class="fas fa-pencil-alt"></i><% end %> | <%= link_to @outfit, method: :delete, data: { confirm: '本当に削除しますか?' } do %><i class="far fa-trash-alt"></i><% end %> 
       <% end %>
         <p><%= link_to '戻る', outfits_path %></p>
       </p>
     </div>
   </div>
 </div>
-
-
 
