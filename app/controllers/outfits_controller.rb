@@ -1,6 +1,7 @@
 class OutfitsController < ApplicationController
-  before_action :authenticate_proposer!, only: %i[ index new create edit update destroy]
-  before_action :authenticate_user!
+  #before_action :authenticate_proposer!, only: %i[ index new create edit update destroy]
+  #before_action :authenticate_user!
+  before_action :authenticate_user_proposer, only: %i[index]
   before_action :set_outfit, only: [:show, :edit, :update, :destroy]
   
 
@@ -67,5 +68,11 @@ class OutfitsController < ApplicationController
     # Only allow a trusted parameter "white list" through.
     def outfit_params
       params.require(:outfit).permit(:title, :content, :image).merge(proposer_id: current_proposer.id)
+    end
+
+    def authenticate_user_proposer
+      if current_user.nil? && current_proposer.nil?
+        redirect_to  new_user_session_path
+      end
     end
 end
