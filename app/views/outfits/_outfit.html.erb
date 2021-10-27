@@ -20,7 +20,7 @@
         </small>
       </p>
       <p class="card-text"><%= outfit.title %></p>
-      <p class="card-text"><%= outfit.proposer.name %></p>
+      <p class="card-text"><%=link_to "#{outfit.proposer.name}", proposer_path(outfit.proposer.id), class:"btn-outline-secondary" %></p>
     </div>
   </div>
 </div>
