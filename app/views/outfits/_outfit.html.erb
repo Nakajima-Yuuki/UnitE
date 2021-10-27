@@ -1,7 +1,7 @@
 <div class="card-deck">
   <div class="card mb-3">
     <% if outfit.image.attached? %>
-      <%= link_to outfit_path(outfit) do %><%= image_tag outfit.image.variant(resize: "246x328"), class: "bd-placeholder-img card-img-top", style: "width=25%, height=200, focusable=false" %><% end %>
+      <%= link_to outfit_path(outfit) do %><%= image_tag outfit.image.variant(resize: "500x667"), class: "bd-placeholder-img card-img-top", style: "width=25%, height=200, focusable=false" %><% end %>
     <% end %>
     <div class="card-body">
       <p class="card-text">
