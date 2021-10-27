@@ -26,7 +26,7 @@ UnitE は、ファッションを楽しみたい方のコーディネート参�
 
 ## 📖機能一覧
 * ユーザー
-  *新規登録・ログイン機能
+  * 新規登録・ログイン機能
   * コーディネートの検索
   * コーディネートお気に入り
   * コーディネート評価機能
@@ -37,11 +37,11 @@ UnitE は、ファッションを楽しみたい方のコーディネート参�
   * 不正な利用者の投稿を編集・削除(CRUD)
 
 ## 📝使用Gemなど一覧
-*ログイン機能&日本語化
+* ログイン機能&日本語化
   * gem 'devise'
   * gem 'devise-i18n'
   * gem 'devise-i18n-views'
-  *gem 'rails-i18n'
+  * gem 'rails-i18n'
 
 * 写真機能
   * gem 'mini_magick'  
@@ -49,20 +49,20 @@ UnitE は、ファッションを楽しみたい方のコーディネート参�
   * gem "aws-sdk-s3", require: false
   * gem 'dotenv-rails'
 
-*ページネーション
+* ページネーション
   * gem 'kaminari'
 
-*Webをリッチにする為のgem
+* Webをリッチにする為のgem
   * gem 'font-awesome-sass'
 
-*検索機能
+* 検索機能
   * gem 'ransack'
 
-*管理者権限
+* 管理者権限
   * gem 'cancancan'
   * gem 'rails_admin'
 
-*seedデータ
+* seedデータ
   * gem 'faker'
 
 ## 実行手順
