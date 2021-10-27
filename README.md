@@ -31,39 +31,39 @@ UnitE は、ファッションを楽しみたい方のコーディネート参�
   * コーディネートお気に入り
   * コーディネート評価機能
 * ファッショニスタ
-  *新規登録機能・ログイン機能
-  *コーディネートの登録(CRUD) (写真投稿)
+  * 新規登録機能・ログイン機能
+  * コーディネートの登録(CRUD) (写真投稿)
 * アドミン(サイト管理者)
-  *不正な利用者の投稿を編集・削除(CRUD)
+  * 不正な利用者の投稿を編集・削除(CRUD)
 
 ## 📝使用Gemなど一覧
 *ログイン機能&日本語化
-  *gem 'devise'
-  *gem 'devise-i18n'
-  *gem 'devise-i18n-views'
+  * gem 'devise'
+  * gem 'devise-i18n'
+  * gem 'devise-i18n-views'
   *gem 'rails-i18n'
 
 * 写真機能
-  *gem 'mini_magick'  
-  *gem 'image_processing', '~> 1.2'
-  *gem "aws-sdk-s3", require: false
-  *gem 'dotenv-rails'
+  * gem 'mini_magick'  
+  * gem 'image_processing', '~> 1.2'
+  * gem "aws-sdk-s3", require: false
+  * gem 'dotenv-rails'
 
 *ページネーション
-  *gem 'kaminari'
+  * gem 'kaminari'
 
 *Webをリッチにする為のgem
-  *gem 'font-awesome-sass'
+  * gem 'font-awesome-sass'
 
 *検索機能
-  *gem 'ransack'
+  * gem 'ransack'
 
 *管理者権限
-  *gem 'cancancan'
-  *gem 'rails_admin'
+  * gem 'cancancan'
+  * gem 'rails_admin'
 
 *seedデータ
-  *gem 'faker'
+  * gem 'faker'
 
 ## 実行手順
 ```
